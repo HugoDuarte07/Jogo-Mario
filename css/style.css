@@ -15,6 +15,7 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    transition: all 1s;
 }
 
 .brown{
@@ -143,6 +144,11 @@
 .death {
     animation: death 2s ease;
 }
+
+.dark-mode {
+    background: linear-gradient(#000e35 , #002ba0);
+}
+
 
 @keyframes clouds-animation {
     from {

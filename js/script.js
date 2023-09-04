@@ -6,6 +6,8 @@ const button = document.querySelector('.button');
 const contador = document.querySelector('.counter');
 const dev = document.querySelector('.credito');
 const bird = document.querySelector('.bird');
+const gameBoard = document.querySelector('.game-board');
+
 
 let pontos = 0;
         const contadorLoop = setInterval(() => {
@@ -23,6 +25,10 @@ const jump = () => {
     }, 1000);
 
 }
+
+const dayNight = setInterval(()=> {
+    gameBoard.classList.toggle('dark-mode');
+} , 10800)
 
 const loop = setInterval(()=> {
 
@@ -52,6 +58,7 @@ const loop = setInterval(()=> {
 
         clearInterval(loop); 
         clearInterval(contadorLoop)
+        clearInterval(dayNight);
         card.style.display = 'flex';
         card.style.animation = 'card-appears 1s ease'
         dev.style.display = 'block';
