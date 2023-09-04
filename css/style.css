@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 22px solid rgb(0, 192, 0);
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.brown{
+    background-color: rgb(92, 46, 0);
+    height: 33vh;
+    border-top: 10px solid rgb(0, 192, 0);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.8s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 0.8s ease-out;
+}
+
+.clouds {
+    width: 500px;
+    position: absolute;
+    animation: clouds-animation 7s infinite linear;
+}
+
+.bird {
+    width: 70px;
+    transform: scaleX(-1);
+    position: absolute;
+    right: -70px;
+    animation: pipe-animation 4s infinite linear;
+    animation-delay: 4s;
+    top: 20%;
+}
+
+.card {
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    left: 34%;
+    bottom: 45%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card button {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-size: .8em;
+    border-radius: 20px;
+    border: 5px solid red;
+    letter-spacing: 3px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .3s;
+}
+
+.card button span{
+    color: red;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2em;
+    border-radius: 20px;
+    transition: all .3s;
+}
+
+.card button:hover {
+    color: white;
+    background-color: red;
+    border: 5px solid yellow;
+    transition: all .3s;
+}
+
+.card button:hover span {
+    color: white;
+    transition: all .3s;
+}
+
+.counter {
+    font-size: 1.5em;
+    margin-left: 30px;
+    margin-top: 15px;
+    position: absolute;
+    text-transform: uppercase;
+    z-index: 1;
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.credito {
+    z-index: 1;
+    position: absolute;
+    right: 3%;
+    margin-top: 15px;
+    color: white;
+    background-color: red;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    text-transform: uppercase;
+    border: 5px solid yellow;
+    display: none;
+}
+
+.death {
+    animation: death 2s ease;
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -500px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    45% {
+        bottom: 150px;
+    }
+
+    50% {
+        bottom: 150px;
+    }
+
+    55% {
+        bottom: 150px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes death {
+    0% {
+        margin-bottom: 0px;
+    }
+
+    40% {
+        margin-bottom: 200px;
+    }
+
+    100% {
+        bottom: -150px;
+    }
+}
+
+@keyframes card-appears {
+    0% {
+        width: 0%;
+        left: 50%;
+    }
+
+    100% {
+        width: 30%;
+        left: 34%;
+    }
+}
+
+@keyframes dev-appears {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
