@@ -28,6 +28,12 @@ const jump = () => {
 
 const dayNight = setInterval(()=> {
     gameBoard.classList.toggle('dark-mode');
+    if (gameBoard.classList.contains('dark-mode')) {
+        bird.style.display = 'none';
+    } else {
+        bird.style.display = 'block';
+        bird.style.animationDelay = '0s'
+    }
 } , 10800)
 
 const loop = setInterval(()=> {

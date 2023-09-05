@@ -52,7 +52,7 @@
     transform: scaleX(-1);
     position: absolute;
     right: -70px;
-    animation: pipe-animation 4s infinite linear;
+    animation: pipe-animation 3.4s infinite linear;
     animation-delay: 4s;
     top: 20%;
 }
@@ -146,7 +146,8 @@
 }
 
 .dark-mode {
-    background: linear-gradient(#000e35 , #002ba0);
+    background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(6,0,112,1) 48%, rgba(87,0,209,1) 100%);
 }
 
 
